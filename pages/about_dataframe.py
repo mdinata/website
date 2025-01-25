@@ -10,7 +10,7 @@ selected_store = st.multiselect("Select store",options=unique_storename)
 
 criteria1 = data['category'].isin(selected_category) 
 criteria2 = data['store_name'].isin(selected_store)
-join_criteria =  (criteria1) & (criteria2)
+join_criteria =  (criteria1) | (criteria2)
 
 criteria3 = data['price'] > 12000
 criteria4 = (data['price'] >= 12000) & (data['price'] <= 40000)
